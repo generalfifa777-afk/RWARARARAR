@@ -1,0 +1,382 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #2b2b2b;
+    line-height: 1.8;
+}
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(20,20,20,0.55), rgba(20,20,20,0.55)),
+        url("images/hero-car.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "✦ ❦ ✦";
+    position: absolute;
+    bottom: 35px;
+    color: rgba(255,255,255,0.75);
+    font-size: 26px;
+    letter-spacing: 12px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(30,30,30,0.8);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9f1c;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ff9f1c;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.subtitle {
+    color: #ffb347;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 35px;
+    background: linear-gradient(145deg,#ffb347,#ff8c00);
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow:
+        0 8px 0 #c06a00,
+        0 15px 25px rgba(0,0,0,.25);
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn:active {
+    transform: translateY(5px);
+    box-shadow:
+        0 3px 0 #c06a00,
+        0 8px 15px rgba(0,0,0,.2);
+}
+
+.section {
+    padding: 90px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: "✦ ✧ ✦";
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: rgba(255,140,0,0.18);
+    font-size: 28px;
+    letter-spacing: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 35px;
+}
+
+h2::before {
+    content: "🍇";
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #ff8c00;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 28px;
+}
+
+h3::after {
+    content: " ❦ ❦ ❦ ";
+    color: #c27a00;
+    font-size: 18px;
+    display: block;
+    margin-top: 8px;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.red-light {
+    background: #ececec;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid #ff8c00;
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border-left: 5px solid #ff8c00;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255,140,0,.25);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.features span {
+    background: #ff8c00;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.gallery-section {
+    background: #f7f7f7;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.gallery img,
+.gallery video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ff8c00;
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+    transition: .3s;
+    background: #000;
+}
+
+.gallery img:hover,
+.gallery video:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.car-photo {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.car-photo img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 25px;
+    border: 3px solid #ff8c00;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.center-text {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.final-text {
+    text-align: center;
+}
+
+.contacts {
+    background: linear-gradient(135deg,#333,#1f1f1f);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+    position: relative;
+}
+
+.contacts::before {
+    content: "✦ ❦ ✦ ❦ ✦";
+    display: block;
+    color: #ffb347;
+    margin-bottom: 20px;
+    letter-spacing: 8px;
+    font-size: 24px;
+}
+
+.contacts h2 {
+    color: white;
+}
+
+.contacts a {
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer::before {
+    content: "✦ ❦ ✦ ❦ ✦";
+    display: block;
+    color: #ffb347;
+    margin-bottom: 12px;
+    letter-spacing: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img,
+    .gallery video {
+        height: 220px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}
+```
